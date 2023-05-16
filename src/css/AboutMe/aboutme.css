@@ -1,0 +1,25 @@
+.intro-container {
+  /* border: 1px solid rgba(255, 55, 55, 0.53); */
+  display: flex;
+  justify-content: center;
+}
+.text-section {
+  max-width: 40rem;
+  place-self: top;
+}
+.profile-pic {
+  height: 15rem;
+  margin: 1rem;
+}
+p {
+  text-align: center;
+  font-size: 18px;
+}
+/* button,
+h1,
+h2,
+h3,
+h4,
+p {
+  border: 1px solid rgba(255, 255, 255, 0.53);
+} */
