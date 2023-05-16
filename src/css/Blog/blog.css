@@ -1,0 +1,15 @@
+img {
+  max-height: 40rem;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+}
+.blog-item {
+  max-width: 60rem;
+}
+.blog-container p {
+  max-width: 40rem;
+  text-align: left;
+}

@@ -1,7 +1,13 @@
 import IntroAboutMe from "../components/IntroAboutMe";
+import ContactDetails from "../components/ContactDetails";
 
 function AboutMe() {
-  return <IntroAboutMe />;
+  return (
+    <div>
+      <IntroAboutMe />
+      <ContactDetails />
+    </div>
+  );
 }
 
 export default AboutMe;
