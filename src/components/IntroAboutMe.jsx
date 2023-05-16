@@ -5,17 +5,22 @@ function IntroAboutMe() {
     <div className="intro-container">
       <section className="text-section">
         {" "}
-        <h2>Hello!</h2>
+        <h2>Hello!👋</h2>
         <p>
-          Who am I? My name is Alvin and live on the country side in west coast
-          Sweden. I am of 27 years of age and I am a former carpenter by 7 seven
-          years. I am now on a path to become a full stack developer and is
-          studying .Net platform.
-          <br /> <br /> My free time is spent with my family and the other half
-          is spent working on the house, logging or just simply riding my
-          bicycle.
-          <br /> <br /> I have huge interest in programming, hit me up:
-          Alvin.strandberg@proton.me
+          My name is Alvin and I'm 27 years old. I have been working as a
+          carpenter for 7 years and have just switched career to programming
+          which I totally love!
+          <br />
+          <br /> If I were to describe myself I'd say I'm a happy and positive
+          person, but if you really would like to know more about me dont
+          hesitate to contact me!
+          <br />
+          For more info about who I am and what I do head over to my{" "}
+          <a href="/blog">blog</a>.
+          <br /> <br /> Contact:
+          <a href="mailto: alvin.strandberg@proton.me">
+            &nbsp;alvin.strandberg@proton.me
+          </a>
         </p>
       </section>
 

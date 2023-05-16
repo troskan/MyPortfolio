@@ -1,0 +1,11 @@
+.portfol-container {
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin: 0.5rem;
+}
+button {
+  display: block;
+  width: 50rem;
+}
