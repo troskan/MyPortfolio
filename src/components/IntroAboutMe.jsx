@@ -1,4 +1,5 @@
 import "../css/AboutMe/aboutme.css";
+import profilePic from "../assets/profile-pic-blur.png"; // Adjust the path as needed
 
 function IntroAboutMe() {
   return (
@@ -25,7 +26,7 @@ function IntroAboutMe() {
       </section>
 
       <img
-        src="src\assets\profile-pic-blur.png"
+        src={profilePic}
         alt="picture of Alvin Strandberg"
         className="profile-pic"
       />

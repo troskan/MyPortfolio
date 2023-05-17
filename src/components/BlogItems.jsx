@@ -1,4 +1,5 @@
 import "../css/Blog/blog.css";
+import skogenSplittin from "../assets/skogen-splittin.jpg"; // Adjust the path as needed
 
 function BlogItems() {
   return (
@@ -12,7 +13,7 @@ function BlogItems() {
           doloremque, optio aliquid! Eos, placeat.
         </p>
 
-        <img src="src/assets/skogen-splittin.jpg" alt="" />
+        <img src={skogenSplittin} alt="" />
       </div>
     </div>
   );
