@@ -25,10 +25,7 @@ main div ul {
 .close-btn {
   color: firebrick;
 }
-.portfol-pic {
-  height: 8rem;
-  width: 8rem;
-}
+
 @media only screen and (max-width: 500px) {
   main div h1 {
     font-size: 18px;
@@ -43,7 +40,7 @@ main div ul {
   }
   .list-btn {
     display: block;
-    width: none;
+    width: 20rem;
   }
 
   #slot-one {
@@ -51,15 +48,11 @@ main div ul {
     padding-top: 0;
     background-color: rgb(30, 30, 30);
 
-    min-height: none;
+    min-height: auto;
     max-height: none;
     border-radius: 5px;
   }
   .close-btn {
     color: firebrick;
-  }
-  .portfol-pic {
-    height: 8rem;
-    width: 8rem;
   }
 }
