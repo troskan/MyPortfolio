@@ -15,7 +15,7 @@
   text-align: center;
   font-size: 18px;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .intro-container {
     /* border: 1px solid rgba(255, 55, 55, 0.53); */
     display: flex;
