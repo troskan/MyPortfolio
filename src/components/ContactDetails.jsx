@@ -1,7 +1,7 @@
 import "../css/AboutMe/contactdetails.css";
-import GithubPic from "./assets/GitHub_Logo_White.png";
-import LinkedIn from "./assets/linkedin.png";
-import Email from "./assets/Graphicloads-100-Flat-2-Email.256.png";
+import GithubPic from "../assets/GitHub_Logo_White.png";
+import LinkedIn from "../assets/linkedin.png";
+import Email from "../assets/Graphicloads-100-Flat-2-Email.256.png";
 
 function ContactDetails() {
   return (
