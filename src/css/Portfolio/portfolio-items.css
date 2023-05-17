@@ -9,6 +9,9 @@ button {
   display: block;
   width: 50rem;
 }
+main div ul {
+  padding: 0;
+}
 
 #slot-one {
   margin: 0px;
@@ -25,4 +28,37 @@ button {
 .portfol-pic {
   height: 8rem;
   width: 8rem;
+}
+@media only screen and (max-width: 400px) {
+  main div h1 {
+    font-size: 18px;
+  }
+  .portfol-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  main div button {
+    margin: 0.5rem;
+  }
+  .list-btn {
+    display: block;
+    width: 20rem;
+  }
+
+  #slot-one {
+    margin: 0px;
+    padding-top: 0;
+    background-color: rgb(30, 30, 30);
+
+    min-height: 10rem;
+    border-radius: 5px;
+  }
+  .close-btn {
+    color: firebrick;
+  }
+  .portfol-pic {
+    height: 8rem;
+    width: 8rem;
+  }
 }

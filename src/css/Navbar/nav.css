@@ -25,3 +25,35 @@ h2 {
   margin-top: 0;
   padding: 0;
 }
+@media only screen and (max-width: 900px) {
+  nav a {
+    margin: 1rem;
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  nav a {
+    margin: 0.7rem;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  nav a {
+    margin: 0.7rem;
+    font-size: 23px;
+  }
+
+  nav {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 380px) {
+  nav a {
+    margin: 0.5rem;
+    font-size: 18px;
+  }
+}

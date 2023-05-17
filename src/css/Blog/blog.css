@@ -1,4 +1,4 @@
-img {
+.blog-item img {
   max-height: 40rem;
 }
 
@@ -12,4 +12,42 @@ img {
 .blog-container p {
   max-width: 40rem;
   text-align: left;
+}
+
+@media only screen and (max-width: 900px) {
+  .blog-container {
+    display: flex;
+    justify-content: center;
+  }
+  .blog-item img {
+    max-height: 30rem;
+  }
+
+  .blog-item {
+    max-width: 50rem;
+  }
+  .blog-container p {
+    max-width: 30rem;
+    text-align: left;
+  }
+  main div h1 {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .blog-item img {
+    max-height: 20rem;
+  }
+
+  .blog-container {
+    display: flex;
+    justify-content: center;
+  }
+  .blog-item {
+    max-width: 60rem;
+  }
+  .blog-container p {
+    max-width: none;
+    text-align: center;
+  }
 }

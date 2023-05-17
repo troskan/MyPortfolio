@@ -11,15 +11,26 @@
   height: 15rem;
   margin: 1rem;
 }
-p {
+.intro-container p {
   text-align: center;
   font-size: 18px;
 }
-/* button,
-h1,
-h2,
-h3,
-h4,
-p {
-  border: 1px solid rgba(255, 255, 255, 0.53);
-} */
+@media only screen and (max-width: 400px) {
+  .intro-container {
+    /* border: 1px solid rgba(255, 55, 55, 0.53); */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .profile-pic {
+    height: 10rem;
+    margin: 1rem;
+  }
+  .intro-container h2 {
+    font-size: 18px;
+  }
+  .intro-container p {
+    font-size: 15px;
+  }
+}
