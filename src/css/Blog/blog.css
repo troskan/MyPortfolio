@@ -13,6 +13,40 @@
   max-width: 40rem;
   text-align: left;
 }
+/* .wip {
+  background-color: rgb(28, 66, 46);
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0.5rem;
+}
+.wip:hover {
+  background-color: rgb(21, 53, 36); */
+/* } */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wip {
+  background: linear-gradient(
+    270deg,
+    rgb(28, 66, 46),
+    rgb(46, 66, 28),
+    rgb(66, 46, 28)
+  );
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0.5rem;
+}
 
 @media only screen and (max-width: 900px) {
   .blog-container {
