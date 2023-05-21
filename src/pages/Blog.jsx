@@ -1,4 +1,5 @@
 import BlogItems from "../components/BlogItems";
+import BlogPosts from "../components/blog/BlogPosts";
 
 function Blog() {
   return (
@@ -14,6 +15,7 @@ function Blog() {
       </h2>
 
       <BlogItems />
+      <BlogPosts />
     </div>
   );
 }
