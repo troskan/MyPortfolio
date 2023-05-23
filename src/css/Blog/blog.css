@@ -13,6 +13,11 @@
   max-width: 40rem;
   text-align: left;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
 /* .wip {
   background-color: rgb(28, 66, 46);
   border-radius: 10px;

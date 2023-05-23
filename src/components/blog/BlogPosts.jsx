@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import Stack from "@mui/material/Stack";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5291/api/Post")
+    fetch("http://localhost:5291/ahpi/Post")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
@@ -15,7 +17,14 @@ const BlogPosts = () => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="center">
+        <Stack sx={{ width: "30%", color: "grey.500" }} spacing={1}>
+          <h2>Loading posts..</h2>
+          <LinearProgress color="success" />
+        </Stack>
+      </div>
+    );
   }
 
   return (
