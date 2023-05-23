@@ -14,7 +14,7 @@ function BlogP() {
         </a>{" "}
       </h2>
 
-      <BlogItems />
+      {/* <BlogItems /> */}
       <BlogPosts />
     </div>
   );
