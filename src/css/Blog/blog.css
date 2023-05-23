@@ -17,7 +17,11 @@
   display: flex;
   justify-content: center;
   margin: 2rem;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-items: center;
 }
+
 /* .wip {
   background-color: rgb(28, 66, 46);
   border-radius: 10px;
@@ -51,6 +55,7 @@
   border-radius: 10px;
   display: inline-block;
   padding: 0.5rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.182);
 }
 
 @media only screen and (max-width: 900px) {
