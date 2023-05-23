@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
 import Navbar from "./components/Navbar";
-import Blog from "./pages/Blog";
+import BlogP from "./pages/BlogP";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <Routes>
               <Route path="/" element={<AboutMe />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog" element={<BlogP />} />
             </Routes>
           </main>
         </div>

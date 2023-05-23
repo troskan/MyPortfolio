@@ -1,7 +1,7 @@
 import BlogItems from "../components/BlogItems";
 import BlogPosts from "../components/blog/BlogPosts";
 
-function Blog() {
+function BlogP() {
   return (
     <div>
       <h1>Blog</h1>
@@ -20,4 +20,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default BlogP;
