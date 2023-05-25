@@ -24,3 +24,9 @@
 .field-container input {
   margin: 0.4rem;
 }
+.login-test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

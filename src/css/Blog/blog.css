@@ -84,6 +84,7 @@
   display: inline-block;
   padding: 0.5rem;
   border: 0.5px solid rgba(255, 255, 255, 0.182);
+  max-height: 10rem;
 }
 
 @media only screen and (max-width: 900px) {

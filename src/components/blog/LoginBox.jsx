@@ -11,10 +11,10 @@ const LoginBox = () => {
           {/* <input placeholder="Username" type="username" />
           <input placeholder="Password" type="password" /> */}
           <TextField
-            id="standard-password-input"
-            label="Password"
-            type="password"
-            autoComplete="current-password"
+            id="standard-username-input"
+            label="Username"
+            type="username"
+            autoComplete="current-username"
             variant="standard"
           />
           <TextField
