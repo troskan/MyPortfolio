@@ -54,7 +54,11 @@ const BlogPosts = () => {
             <h2>{post.title}</h2>
             <p>{post.content}</p>
 
-            {post.imageUrls[0] && <img src={post.imageUrls[0]} alt="Blog" />}
+            <div>
+              {post.imageUrls.map((url, index) => (
+                <img key={index} src={url} alt={`Blog image ${index}`} />
+              ))}
+            </div>
 
             <div>
               <button className="blog-button">
