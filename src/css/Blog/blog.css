@@ -1,18 +1,27 @@
 .blog-item img {
-  max-height: 40rem;
+  max-height: 30rem;
+  border-radius: 1rem;
 }
 
 .blog-container {
   display: flex;
   justify-content: center;
+  margin: 2rem;
 }
-.blog-item {
-  max-width: 60rem;
-}
-.blog-container p {
+.blog-item p,
+.blog-item h2 {
   max-width: 40rem;
-  text-align: left;
+  color: rgb(89, 161, 161);
 }
+
+.blog-item {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  padding: 3rem;
+  padding-top: 0.2rem;
+  border-radius: 1rem;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -20,6 +29,17 @@
   flex-wrap: wrap;
   justify-self: center;
   justify-items: center;
+}
+.comment-container {
+  display: flex;
+  flex-direction: column;
+}
+.comment-container textarea {
+  height: 5rem;
+  background-color: rgb(239, 214, 255);
+  border-radius: 0.5rem;
+  resize: none;
+  color: black;
 }
 
 /* .wip {

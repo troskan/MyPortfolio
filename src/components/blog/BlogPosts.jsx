@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import LinearProgress from "@mui/material/LinearProgress";
 
-import Box from "@mui/material/Box";
-import Skeleton from "@mui/material/Skeleton";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -46,13 +45,36 @@ const BlogPosts = () => {
   return (
     <div>
       {posts.map((post) => (
-        <div key={post.postID}>
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
-          <p>Posted by: {post.userName}</p>
-          <p>Posted on: {post.datePostedFormatted}</p>
-          <p>Category: {post.categoryName}</p>
-          <h2>Successfully fetched data from API.</h2>
+        <div className="blog-container">
+          <div className="blog-item" key={post.postID}>
+            <p>
+              Posted by: {post.userName}, Posted on: {post.datePostedFormatted}
+            </p>
+            <p>Category: {post.categoryName}</p>
+            <h2>{post.title}</h2>
+            <p>{post.content}</p>
+
+            {post.imageUrls[0] && <img src={post.imageUrls[0]} alt="Blog" />}
+
+            <div>
+              <button className="blog-button">
+                <ThumbUpIcon />
+              </button>
+            </div>
+
+            <div className="comment-container">
+              <label htmlFor="comments">comments</label>
+
+              <textarea
+                id="comment"
+                name="comment"
+                className="comment-textarea"
+                label="comments"
+                placeholder=" Write your comment here!"
+              ></textarea>
+              <button className="submit-button">Submit</button>
+            </div>
+          </div>
         </div>
       ))}
     </div>

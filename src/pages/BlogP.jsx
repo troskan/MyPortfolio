@@ -1,9 +1,9 @@
-import BlogItems from "../components/BlogItems";
 import BlogPosts from "../components/blog/BlogPosts";
+import LoginBox from "../components/blog/LoginBox";
 
 function BlogP() {
   return (
-    <div>
+    <div id="blog-warning">
       <h1>Blog</h1>
       <h2 className="wip">
         ⚠️ This blog is a work in progress.
@@ -11,7 +11,8 @@ function BlogP() {
         Follow progress here:{" "}
         <a href="https://github.com/troskan/BlogManagementAPI" target="_blank">
           Github
-        </a>{" "}
+        </a>
+        <LoginBox />
       </h2>
 
       {/* <BlogItems /> */}
