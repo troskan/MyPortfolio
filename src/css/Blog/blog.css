@@ -74,9 +74,9 @@
 .wip {
   background: linear-gradient(
     270deg,
-    rgb(178, 167, 12),
-    rgb(174, 157, 50),
-    rgb(163, 187, 67)
+    rgba(168, 49, 49, 0.174),
+    rgb(47, 47, 47),
+    rgba(44, 35, 100, 0.158)
   );
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
