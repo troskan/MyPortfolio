@@ -5,7 +5,7 @@ import LoginBox from "../components/blog/LoginBox";
 function BlogP() {
   return (
     <div id="blog-warning">
-      <h1>Blog</h1>
+      <h1>Blog</h1>{" "}
       <div className="login-test">
         {" "}
         <h2 className="wip">
@@ -19,9 +19,10 @@ function BlogP() {
             Github
           </a>
         </h2>
-        <LoginBox />
       </div>
-
+      <h4>
+        <a href="/login">Login</a>
+      </h4>
       {/* <BlogItems /> */}
       <BlogPosts />
     </div>
