@@ -15,19 +15,22 @@ const RegisterPage = () => {
 
     try {
       // Make a request to the register endpoint
-      const response = await fetch("http://localhost:5291/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userName: username,
-          password: password,
-          email: email,
-          roleID: 1,
-          dateRegistered: dateRegistered,
-        }),
-      });
+      const response = await fetch(
+        "https://blogweb.azurewebsites.net/User/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userName: username,
+            password: password,
+            email: email,
+            roleID: 1,
+            dateRegistered: dateRegistered,
+          }),
+        }
+      );
 
       // If the registration is successful, the status should be 200 OK
       if (response.ok) {
