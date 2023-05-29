@@ -1,45 +1,62 @@
-// LoginPage.jsx
 import React, { useState } from "react";
-import "../css/Login/login.css";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../Routes/AuthContext";
 
-const LoginPage = () => {
+function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const navigate = useNavigate();
+  const { login } = useAuth(); // Get the login function from the context
 
-    // Here, you would typically send the username and password to your server for authentication
-    // If successful, store the returned token and user role in local storage or a cookie
-    // Then redirect the user to the appropriate page
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const user = await login(username, password); // Call the login function
+      if (user) {
+        // If the login function returns a user, login was successful
+        console.log("Login successful");
+
+        // Check if user has role 2
+        if (user.RoleID === 2) {
+          navigate("/admin");
+        } else {
+          console.error("User does not have permission to access admin page");
+        }
+      } else {
+        console.error("Login failed");
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   };
 
   return (
     <div>
-      <h1>Login</h1>
-      <div className="login-container">
-        <form onSubmit={handleSubmit}>
-          <label>
-            Username:
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-          <label>
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Username:
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        <button type="submit">Login</button>
+      </form>
     </div>
   );
-};
+}
 
 export default LoginPage;

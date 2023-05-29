@@ -1,0 +1,15 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.register-container form input {
+  margin: 1rem;
+  justify-content: flex-start;
+}

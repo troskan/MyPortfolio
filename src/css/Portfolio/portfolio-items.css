@@ -40,7 +40,7 @@ main div ul {
   }
   .list-btn {
     display: block;
-    width: 20rem;
+    width: 20 / rem;
   }
 
   #slot-one {

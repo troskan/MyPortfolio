@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Routes/AuthContext";
+import PostCreator from "../components/blog/PostCreator";
 
 const AdminPage = () => {
   const auth = useAuth();
@@ -18,6 +19,7 @@ const AdminPage = () => {
     <div>
       <h1>Admin Page</h1>
       <p>Welcome, admin! This is your private page.</p>
+      <PostCreator />
     </div>
   ) : null;
 };

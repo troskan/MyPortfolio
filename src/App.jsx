@@ -8,6 +8,7 @@ import BlogP from "./pages/BlogP";
 import LoginPage from "./pages/LoginPage"; // Import your login page
 import AdminPage from "./pages/AdminPage"; // Import your admin page
 import { AuthProvider } from "./Routes/AuthContext";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/blog" element={<BlogP />} />
                 <Route path="/login" element={<LoginPage />} />{" "}
+                <Route path="/register" element={<RegisterPage />} />{" "}
                 {/* Add your login route */}
                 <Route path="/admin" element={<AdminPage />} />
                 {/* Protect your admin page */}

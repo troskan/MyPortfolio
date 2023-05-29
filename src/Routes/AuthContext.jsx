@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     // Send a POST request to your server with the username and password
-    const response = await fetch("https://yourserver.com/api/login", {
+    const response = await fetch("http://localhost:5291/User/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,14 +19,29 @@ export const AuthProvider = ({ children }) => {
       body: JSON.stringify({ username, password }),
     });
 
-    // Get the data from the response
-    const data = await response.json();
+    console.log("response", response); // log the whole response object
+    console.log("status", response.status); // log the status code of the response
 
-    // If the login was successful, set the user
-    if (response.ok) {
-      setUser(data);
+    // Check if the response has content before trying to parse it
+    const contentType = response.headers.get("Content-Type");
+    if (contentType && contentType.includes("application/json")) {
+      const data = await response.json();
+      console.log("data", data); // log the parsed JSON data
+
+      // If the login was successful, set the user
+      if (response.ok) {
+        setUser(data);
+        return data; // added this line to return the user data to the login function caller
+      } else {
+        // Handle error...
+      }
+    } else if (!response.ok) {
+      // adjusted this condition
+      console.error("Login failed");
     } else {
-      // Handle error...
+      console.log(
+        "Login successful, but no JSON content received from the server"
+      );
     }
   };
 
