@@ -3,7 +3,7 @@
     { "handle": "filesystem" },
     {
       "src": "/.*",
-      "dest": "/aboutme.html"
+      "dest": "/index.html"
     }
   ]
 }
