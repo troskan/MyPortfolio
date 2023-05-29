@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Routes/AuthContext";
+import IsLoading from "../components/IsLoading";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Corrected here
 
   const navigate = useNavigate();
   const { login } = useAuth(); // Get the login function from the context
 
   const handleSubmit = async (e) => {
+    setIsLoading(true);
+
     e.preventDefault();
     try {
       const user = await login(username, password); // Call the login function
@@ -21,16 +25,23 @@ function LoginPage() {
         if (user.RoleID === 2) {
           navigate("/admin");
         } else {
-          console.error("User does not have permission to access admin page");
+          return (
+            <div>
+              <p>You do not have access to this page, sorry.</p>
+            </div>
+          );
         }
       } else {
         console.error("Login failed");
       }
     } catch (error) {
       console.error("An error occurred:", error);
+    } finally {
+      setIsLoading(false); // Ensures isLoading is set to false after operation
     }
   };
 
+  if (isLoading) return <IsLoading string="authentication" />;
   return (
     <div>
       <h2>Login</h2>

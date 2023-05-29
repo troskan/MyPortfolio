@@ -11,22 +11,25 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     // Send a POST request to your server with the username and password
-    const response = await fetch("http://localhost:5291/User/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, password }),
-    });
 
-    console.log("response", response); // log the whole response object
+    const response = await fetch(
+      "https://blogweb.azurewebsites.net/User/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      }
+    );
+
     console.log("status", response.status); // log the status code of the response
 
     // Check if the response has content before trying to parse it
     const contentType = response.headers.get("Content-Type");
     if (contentType && contentType.includes("application/json")) {
       const data = await response.json();
-      console.log("data", data); // log the parsed JSON data
+      // console.log("data", data); // log the parsed JSON data
 
       // If the login was successful, set the user
       if (response.ok) {
