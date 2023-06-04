@@ -10,7 +10,11 @@ const Logout = () => {
     navigate("/aboutme");
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return (
+    <button id="logout" onClick={handleLogout}>
+      Logout
+    </button>
+  );
 };
 
 export default Logout;

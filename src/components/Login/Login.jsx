@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../../css/Login/login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -21,6 +24,7 @@ const Login = () => {
         console.log(res.data);
         // Save token to localStorage
         localStorage.setItem("token", res.data);
+        navigate("/dashboard");
       })
       .catch((error) => console.log(error));
   };
