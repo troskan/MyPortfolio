@@ -6,6 +6,7 @@
 .blog-item img {
   max-height: 20rem;
   border-radius: 1rem;
+  margin: 0.5rem;
 }
 
 .blog-container {
@@ -28,7 +29,6 @@
   padding-top: 0.2rem;
   border-radius: 1rem;
   max-width: 35rem;
-  margin: 0.5rem;
 }
 
 .center {
