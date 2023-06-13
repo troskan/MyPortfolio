@@ -22,11 +22,14 @@
   color: white;
 }
 .field-container input {
-  margin: 0.4rem;
+  color: black;
 }
 .login-test {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+#standard-username-input {
+  color: black;
 }

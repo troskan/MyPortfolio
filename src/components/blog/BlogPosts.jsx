@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import LinearProgress from "@mui/material/LinearProgress";
+import "../../css/Blog/blog.css";
 
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
@@ -44,8 +45,8 @@ const BlogPosts = () => {
 
   return (
     <div>
-      {posts.map((post) => (
-        <div className="blog-container">
+      {[...posts].reverse().map((post) => (
+        <div className="blog-container" key={post.postID}>
           <div className="blog-item" key={post.postID}>
             <p>
               Posted by: {post.userName}, Posted on: {post.datePostedFormatted}

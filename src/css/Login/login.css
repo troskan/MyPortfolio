@@ -1,16 +1,12 @@
-.login-container {
+#login-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
-.login-container form {
+#login-form {
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
-.login-container input {
-  margin: 1rem;
-}
-
-.login-container form {
+#login-form input {
+  margin: 0.2rem;
 }
