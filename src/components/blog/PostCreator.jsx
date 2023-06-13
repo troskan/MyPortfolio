@@ -66,7 +66,8 @@ function PostCreator() {
     setImageUrls(newImageUrls);
   };
 
-  const addImageUrlField = () => {
+  const addImageUrlField = (e) => {
+    e.preventDefault(); // Prevent the default behavior
     setImageUrls([...imageUrls, ""]);
   };
 
