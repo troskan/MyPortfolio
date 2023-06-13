@@ -82,6 +82,7 @@ const BlogPosts = () => {
                   src={url}
                   alt={`Blog image ${index}`}
                   onClick={() => openModal(url)}
+                  id="blog-pic"
                 />
               ))}
             </div>

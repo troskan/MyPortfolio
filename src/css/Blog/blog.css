@@ -9,6 +9,9 @@
   margin: 0.5rem;
   border: 1px solid white;
 }
+#blog-pic ::hover {
+  border: 10px solid gold;
+}
 .blog-item img ::hover {
   border: 5px solid gold;
   max-height: 30rem;
