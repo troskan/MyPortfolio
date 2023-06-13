@@ -46,6 +46,7 @@ const Login = () => {
           <input type="submit" value="Submit" />
         </form>
       </div>
+      <a href="/register">Register</a>
     </div>
   );
 };

@@ -6,6 +6,8 @@ import Portfolio from "./pages/Portfolio";
 import Navbar from "./components/Navbar";
 import BlogP from "./pages/BlogP";
 import DashboardPage from "./pages/DashboardPage"; // Import your login page
+import LoginPage from "./pages/LoginPage"; // Import your login page
+import RegisterPage from "./pages/LoginPage"; // Import your login page
 import { AuthProvider } from "./Routes/AuthContext";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/blog" element={<BlogP />} />
                 <Route path="/dashboard" element={<DashboardPage />} />{" "}
+                <Route path="/login" element={<LoginPage />} />{" "}
+                <Route path="/register" element={<RegisterPage />} />{" "}
               </Routes>
             </main>
           </div>

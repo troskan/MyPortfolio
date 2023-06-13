@@ -10,7 +10,8 @@ const BlogPosts = () => {
   const [isError, setError] = useState(false);
 
   useEffect(() => {
-    fetch("https://blogweb.azurewebsites.net/api/Post")
+    // fetch("https://blogweb.azurewebsites.net/api/Post")
+    fetch("http://localhost:5291/api/Post")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);

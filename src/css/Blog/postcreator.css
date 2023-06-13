@@ -2,3 +2,22 @@
 th {
   margin: 10rem;
 }
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.form-container input {
+  color: aqua;
+}
+.form-container textarea {
+  color: aqua;
+  min-height: 10rem;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../../css/Login/login.css";
+import "../../css/Blog/register.css";
 
 const Register = () => {
   const [userName, setUserName] = useState("");
@@ -27,6 +27,7 @@ const Register = () => {
   return (
     <div>
       <h2>Register</h2>
+
       <div id="register-container">
         <form action="" id="register-form" onSubmit={handleSubmit}>
           <input
