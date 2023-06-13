@@ -7,6 +7,11 @@
   max-height: 20rem;
   border-radius: 1rem;
   margin: 0.5rem;
+  border: 1px solid white;
+}
+.blog-item img ::hover {
+  border: 5px solid gold;
+  max-height: 30rem;
 }
 
 .blog-container {
@@ -50,16 +55,32 @@
   resize: none;
   color: black;
 }
-
-/* .wip {
-  background-color: rgb(28, 66, 46);
-  border-radius: 10px;
-  display: inline-block;
-  padding: 0.5rem;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.wip:hover {
-  background-color: rgb(21, 53, 36); */
-/* } */
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 80px;
+  cursor: pointer;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

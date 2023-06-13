@@ -9,7 +9,9 @@ const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setError] = useState(false);
-
+  //Modal States
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
   useEffect(() => {
     fetch("https://blogweb.azurewebsites.net/api/Post")
       .then((response) => response.json())
@@ -23,6 +25,15 @@ const BlogPosts = () => {
         console.error("Error:", error);
       });
   }, []);
+  //Modal
+  const openModal = (imageUrl) => {
+    setModalImage(imageUrl);
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   if (isError) {
     return (
       <div className="center">
@@ -45,6 +56,15 @@ const BlogPosts = () => {
 
   return (
     <div>
+      {isModalOpen && (
+        <div className="modal">
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <img className="modal-content" src={modalImage} alt="Enlarged" />
+        </div>
+      )}
+
       {[...posts].reverse().map((post) => (
         <div className="blog-container" key={post.postID}>
           <div className="blog-item" key={post.postID}>
@@ -57,7 +77,12 @@ const BlogPosts = () => {
 
             <div>
               {post.imageUrls.map((url, index) => (
-                <img key={index} src={url} alt={`Blog image ${index}`} />
+                <img
+                  key={index}
+                  src={url}
+                  alt={`Blog image ${index}`}
+                  onClick={() => openModal(url)}
+                />
               ))}
             </div>
 
