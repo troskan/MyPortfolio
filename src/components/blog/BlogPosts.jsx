@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import LinearProgress from "@mui/material/LinearProgress";
+import "../../css/Blog/blog.css";
 
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
