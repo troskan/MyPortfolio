@@ -1,6 +1,4 @@
-import BlogItems from "../components/BlogItems";
 import BlogPosts from "../components/blog/BlogPosts";
-import LoginBox from "../components/blog/LoginBox";
 
 function BlogP() {
   return (

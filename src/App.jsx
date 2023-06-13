@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import BlogP from "./pages/BlogP";
 import DashboardPage from "./pages/DashboardPage"; // Import your login page
 import LoginPage from "./pages/LoginPage"; // Import your login page
-import RegisterPage from "./pages/LoginPage"; // Import your login page
+import RegisterPage from "./pages/RegisterPage"; // Import your login page
 import { AuthProvider } from "./Routes/AuthContext";
 
 function App() {

@@ -25,7 +25,7 @@ function PostCreator() {
   };
 
   const handleCreatePost = async () => {
-    const url = "http://localhost:5291/api/Post/test";
+    const url = "https://blogweb.azurewebsites.net/api/Post/test";
 
     const newPostData = {
       title,
