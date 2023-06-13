@@ -15,12 +15,16 @@ const Dashboard = () => {
   return (
     <div>
       <h1>Admin Panel</h1>
-      {isLoggedIn && (
+      {isLoggedIn ? (
         <div>
-          {" "}
           <h2>Welcome, you are logged in!</h2>
           <PostCreator />
           <Logout />
+        </div>
+      ) : (
+        <div>
+          <h2>You are not logged in!</h2>
+          <a href="/login">Login</a>
         </div>
       )}
     </div>
