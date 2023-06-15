@@ -1,4 +1,5 @@
 import BlogPosts from "../components/blog/BlogPosts";
+import FilterPosts from "../components/blog/FilterPosts";
 
 function BlogP() {
   return (
@@ -22,6 +23,7 @@ function BlogP() {
         <a href="/login">Login</a>
       </h4>
       {/* <BlogItems /> */}
+      <FilterPosts />
       <BlogPosts />
     </div>
   );
