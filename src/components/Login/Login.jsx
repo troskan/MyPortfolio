@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -26,8 +27,17 @@ const Login = () => {
         localStorage.setItem("token", res.data);
         navigate("/dashboard");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setError(true);
+        setPassword("");
+        setUsername("");
+      });
   };
+
+  const isUsernameEntered =
+    username.trim().length > 3 && password.trim().length > 3;
+
   return (
     <div>
       <h2>Login</h2>
@@ -36,17 +46,33 @@ const Login = () => {
           <input
             type="username"
             value={username}
+            placeholder="Username"
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
+            placeholder="Password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input type="submit" value="Submit" />
+          <input
+            type="submit"
+            value="Login"
+            style={{
+              backgroundColor: isUsernameEntered
+                ? "rgb(22, 138, 22)"
+                : "inherit",
+            }}
+          />
         </form>
       </div>
       <a href="/register">Register</a>
+      <div>
+        {" "}
+        {error && (
+          <span className="error-message">Wrong password or username.</span>
+        )}
+      </div>
     </div>
   );
 };

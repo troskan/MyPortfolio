@@ -10,3 +10,15 @@
 #login-form input {
   margin: 0.2rem;
 }
+
+.error-message {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  padding-bottom: 0.2rem;
+  border-radius: 4px;
+  margin: 0.5rem;
+}
+
+.submit-button-active {
+  background-color: rgb(22, 138, 22);
+}
