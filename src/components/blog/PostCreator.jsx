@@ -14,6 +14,8 @@ function PostCreator() {
   const [categoryID, setCategoryID] = useState("");
   const [imageUrls, setImageUrls] = useState([""]);
 
+  const [youtubeUrl, setYoutubeUrl] = useState([""]);
+
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -25,7 +27,8 @@ function PostCreator() {
   };
 
   const handleCreatePost = async () => {
-    const url = "https://blogweb.azurewebsites.net/api/Post/test";
+    // const url = "https://blogweb.azurewebsites.net/api/Post/test";
+    const url = "http://localhost:5291/api/Post/test";
 
     const newPostData = {
       title,
@@ -34,6 +37,7 @@ function PostCreator() {
       categoryID: Number(categoryID),
       imageUrls: imageUrls.filter((url) => url),
       datePosted: new Date().toISOString(),
+      youtubeUrl,
     };
 
     const requestOptions = {
@@ -103,7 +107,7 @@ function PostCreator() {
             ></textarea>
             <input
               type="text"
-              placeholder="User ID"
+              placeholder="User ID = 7"
               value={userID}
               onChange={(e) => setUserID(e.target.value)}
             />
@@ -124,6 +128,13 @@ function PostCreator() {
                 onChange={(e) => handleImageUrlChange(index, e.target.value)}
               />
             ))}
+            <p>Youtube URL</p>
+            <input
+              type="text"
+              placeholder="Youtube URL"
+              value={youtubeUrl}
+              onChange={(e) => setYoutubeUrl(e.target.value)}
+            />
 
             <button onClick={addImageUrlField}>Add another image URL</button>
 
