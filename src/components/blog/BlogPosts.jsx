@@ -76,9 +76,10 @@ const BlogPosts = () => {
             <p>{post.content}</p>
             {post.youtubeUrl && (
               <div>
+                <p>🎵 Post Related Music 🎵</p>
                 <iframe
-                  width="250"
-                  height="100"
+                  width="350"
+                  height="200"
                   src={post.youtubeUrl}
                   title="YouTube video player"
                   frameBorder="0"
