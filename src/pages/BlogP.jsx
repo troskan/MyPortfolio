@@ -23,7 +23,7 @@ function BlogP() {
         <a href="/login">Login</a>
       </h4>
       {/* <BlogItems /> */}
-      <FilterPosts />
+      {/* <FilterPosts /> */}
       <BlogPosts />
     </div>
   );
