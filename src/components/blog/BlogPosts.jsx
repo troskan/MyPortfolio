@@ -74,7 +74,19 @@ const BlogPosts = () => {
             <p>Category: {post.categoryName}</p>
             <h2>{post.title}</h2>
             <p>{post.content}</p>
-
+            {post.youtubeUrl && (
+              <div>
+                <iframe
+                  width="250"
+                  height="100"
+                  src={post.youtubeUrl}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            )}
             <div>
               {post.imageUrls.map((url, index) => (
                 <img
