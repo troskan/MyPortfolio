@@ -1,8 +1,9 @@
 nav a {
   margin: 3rem;
+  margin-top: 0;
   font-size: 40px;
   color: white;
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 nav a:hover {
   color: rgb(255, 106, 106);
@@ -24,6 +25,17 @@ h2 {
 .nav-container {
   margin-top: 0;
   padding: 0;
+  margin-top: 0;
+}
+.alvin {
+  font-size: 14px;
+  display: flex;
+  justify-content: right;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: initial;
 }
 @media only screen and (max-width: 900px) {
   nav a {
