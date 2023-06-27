@@ -7,7 +7,7 @@ function BlogP() {
       <h1>Blog</h1>{" "}
       <div className="login-test">
         {" "}
-        <h2 className="wip">
+        {/* <h2 className="wip">
           ⚠️ This blog is a work in progress.
           <br />
           Follow progress here:{" "}
@@ -17,7 +17,7 @@ function BlogP() {
           >
             Github
           </a>
-        </h2>
+        </h2> */}
       </div>
       <h4>
         <a href="/login">Login</a>
