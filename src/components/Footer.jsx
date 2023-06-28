@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       {/* <h1 className="alvin">Alvin Strandberg</h1> */}
       <div>
-        <a href="#">Top of pageq</a>
+        <a href="#">Top of page</a>
       </div>
     </footer>
   );
