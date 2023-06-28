@@ -1,3 +1,6 @@
+#root {
+}
+
 body {
   /* background-color: aliceblue; */
 }
@@ -19,7 +22,10 @@ body {
   border: 5px solid gold;
   max-height: 30rem;
 }
-
+.blog-content {
+  display: flex;
+  justify-content: space-evenly;
+}
 .blog-container {
   display: flex;
   justify-content: center;
@@ -127,7 +133,6 @@ body {
     max-width: 50rem;
   }
   .blog-container p {
-    max-width: 30rem;
     text-align: center;
   }
   main div h1 {
@@ -138,8 +143,7 @@ body {
   .blog-item img {
     max-height: 20rem;
   }
-  .blog-holder {
-  }
+
   .blog-container {
     display: flex;
     justify-content: center;
