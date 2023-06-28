@@ -67,7 +67,7 @@ const BlogPosts = () => {
 
       {[...posts].reverse().map((post) => (
         <div className="blog-container" key={post.postID}>
-          <div className="blog-item" key={post.postID}>
+          <div className="blog-item" id={post.postID} key={post.postID}>
             <p>
               Posted by: {post.userName}, Posted on: {post.datePostedFormatted}
             </p>
