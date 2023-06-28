@@ -3,7 +3,7 @@ import FilterPosts from "../components/blog/FilterPosts";
 
 function BlogP() {
   return (
-    <div id="blog-warning">
+    <div className="blog-holder">
       <h1>Blog</h1>{" "}
       <div className="login-test">
         {" "}
