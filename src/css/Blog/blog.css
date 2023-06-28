@@ -28,12 +28,10 @@ body {
 .blog-item p,
 .blog-item h2 {
   max-width: 40rem;
-  color: rgb(89, 161, 161);
   color: white;
 }
 
 .blog-item {
-  background-color: rgb(255, 255, 255);
   background-color: rgb(54, 54, 54);
   border: 2px solid black;
   padding: 3rem;
@@ -130,10 +128,29 @@ body {
   }
   .blog-container p {
     max-width: 30rem;
-    text-align: left;
+    text-align: center;
   }
   main div h1 {
     font-size: 35px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-item img {
+    max-height: 20rem;
+  }
+  .blog-holder {
+  }
+  .blog-container {
+    display: flex;
+    justify-content: center;
+  }
+  .blog-item {
+    max-width: 60rem;
+    padding: 1rem;
+  }
+  .blog-container p {
+    max-width: none;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -147,6 +164,7 @@ body {
   }
   .blog-item {
     max-width: 60rem;
+    padding: 0.5rem;
   }
   .blog-container p {
     max-width: none;
