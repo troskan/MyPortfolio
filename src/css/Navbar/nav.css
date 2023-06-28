@@ -1,5 +1,6 @@
 nav a {
-  margin: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   margin-top: 0;
   font-size: 40px;
   color: white;
@@ -9,14 +10,22 @@ nav a:hover {
   color: rgb(255, 106, 106);
 }
 nav {
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   margin-bottom: 1.5rem;
+  width: 40rem;
+  background-color: #333333a6;
+  border: 1px solid rgba(255, 255, 255, 0.377);
+  border-radius: 25px;
+}
+.nav-container {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-}
-nav,
-.nav-container {
-  /* border: 1px solid blue; */
+
+  z-index: 1000; /* High z-index to ensure it's above other content */
 }
 h2 {
   margin: 0;
