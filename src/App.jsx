@@ -28,7 +28,6 @@ function App() {
                 <Route path="/register" element={<RegisterPage />} />{" "}
               </Routes>
             </main>
-            <Footer />
           </div>
         </Router>
       </AuthProvider>

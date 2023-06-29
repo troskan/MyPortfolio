@@ -5,6 +5,10 @@
   padding-left: 1rem;
   list-style: none;
 }
+.blog-links li a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.507);
+}
 
 .blog-links {
   position: sticky;

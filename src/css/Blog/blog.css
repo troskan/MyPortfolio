@@ -90,7 +90,38 @@ body {
   font-size: 80px;
   cursor: pointer;
 }
+footer {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 
+  display: flex;
+  justify-content: center;
+}
+footer div {
+  background-color: rgba(0, 0, 0, 0.575);
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+footer a {
+  color: white;
+}
+#top-button {
+  padding: 0.2rem;
+  background-color: #1a1a1aa2;
+}
+#login-button {
+  margin: 0px;
+  padding: 0.4rem;
+  position: sticky;
+  width: 100%;
+  top: 7rem;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
