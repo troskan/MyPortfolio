@@ -17,7 +17,6 @@ const Dashboard = () => {
       <h1>Admin Panel</h1>
       {isLoggedIn ? (
         <div>
-          <h2>Welcome, you are logged in!</h2>
           <PostCreator />
           <Logout />
         </div>

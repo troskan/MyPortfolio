@@ -1,5 +1,5 @@
 import BlogPosts from "../components/blog/BlogPosts";
-import FilterPosts from "../components/blog/FilterPosts";
+// import FilterPosts from "../components/blog/FilterPosts";
 
 function BlogP() {
   return (

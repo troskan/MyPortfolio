@@ -25,6 +25,8 @@
   .text-section {
     max-width: none;
     place-self: top;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .profile-pic {
