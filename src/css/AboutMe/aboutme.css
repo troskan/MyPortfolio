@@ -2,6 +2,7 @@
   /* border: 1px solid rgba(255, 55, 55, 0.53); */
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 .text-section {
   max-width: 40rem;

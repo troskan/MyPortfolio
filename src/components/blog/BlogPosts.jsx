@@ -46,7 +46,7 @@ const BlogPosts = () => {
   } else if (isLoading) {
     return (
       <div className="center">
-        <Stack sx={{ width: "30%", color: "grey.500" }} spacing={1}>
+        <Stack sx={{ width: "50%", color: "grey.500" }} spacing={1}>
           <h2>Loading posts..</h2>
           <LinearProgress color="success" />
         </Stack>
@@ -55,7 +55,7 @@ const BlogPosts = () => {
   }
 
   return (
-    <div>
+    <div className="blog">
       {isModalOpen && (
         <div className="modal">
           <span className="close" onClick={closeModal}>
@@ -67,7 +67,7 @@ const BlogPosts = () => {
 
       {[...posts].reverse().map((post) => (
         <div className="blog-container" key={post.postID}>
-          <div className="blog-item" key={post.postID}>
+          <div className="blog-item" id={post.postID} key={post.postID}>
             <p>
               Posted by: {post.userName}, Posted on: {post.datePostedFormatted}
             </p>
@@ -78,7 +78,7 @@ const BlogPosts = () => {
               <div>
                 <p>🎵 Post Related Music 🎵</p>
                 <iframe
-                  width="350"
+                  width="260"
                   height="200"
                   src={post.youtubeUrl}
                   title="YouTube video player"
@@ -115,8 +115,11 @@ const BlogPosts = () => {
                 className="comment-textarea"
                 label="comments"
                 placeholder=" Write your comment here!"
+                disabled
               ></textarea>
-              <button className="submit-button">Submit</button>
+              <button className="submit-button" disabled>
+                Submit
+              </button>
             </div>
           </div>
         </div>

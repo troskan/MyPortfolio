@@ -1,9 +1,10 @@
-body {
-  /* background-color: aliceblue; */
-}
-.blog-warning {
+.blog {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+#stack-header {
+  width: 60rem;
 }
 
 .blog-item img {
@@ -19,7 +20,10 @@ body {
   border: 5px solid gold;
   max-height: 30rem;
 }
-
+.blog-content {
+  display: flex;
+  justify-content: space-evenly;
+}
 .blog-container {
   display: flex;
   justify-content: center;
@@ -28,12 +32,10 @@ body {
 .blog-item p,
 .blog-item h2 {
   max-width: 40rem;
-  color: rgb(89, 161, 161);
   color: white;
 }
 
 .blog-item {
-  background-color: rgb(255, 255, 255);
   background-color: rgb(54, 54, 54);
   border: 2px solid black;
   padding: 3rem;
@@ -45,6 +47,7 @@ body {
 .center {
   display: flex;
   justify-content: center;
+  width: 20rem;
   margin: 2rem;
   flex-wrap: wrap;
   justify-self: center;
@@ -86,7 +89,38 @@ body {
   font-size: 80px;
   cursor: pointer;
 }
+footer {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 
+  display: flex;
+  justify-content: center;
+}
+footer div {
+  background-color: rgba(0, 0, 0, 0.575);
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+footer a {
+  color: white;
+}
+#top-button {
+  padding: 0.2rem;
+  background-color: #1a1a1aa2;
+}
+#login-button {
+  margin: 0px;
+  padding: 0.4rem;
+  position: sticky;
+  width: 100%;
+  top: 7rem;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -97,23 +131,6 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.wip {
-  background: linear-gradient(
-    270deg,
-    rgba(168, 49, 49, 0.174),
-    rgb(47, 47, 47),
-    rgba(44, 35, 100, 0.158)
-  );
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
-  border-radius: 10px;
-  display: inline-block;
-  padding: 0.5rem;
-  border: 0.5px solid rgba(255, 255, 255, 0.182);
-
-  max-height: 10rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -129,11 +146,29 @@ body {
     max-width: 50rem;
   }
   .blog-container p {
-    max-width: 30rem;
-    text-align: left;
+    text-align: center;
   }
   main div h1 {
     font-size: 35px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-item img {
+    max-height: 20rem;
+  }
+
+  .blog-container {
+    display: flex;
+    justify-content: center;
+  }
+  .blog-item {
+    max-width: 60rem;
+    padding: 1rem;
+  }
+  .blog-container p {
+    max-width: none;
+    text-align: center;
+    margin: 0rem;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -146,10 +181,13 @@ body {
     justify-content: center;
   }
   .blog-item {
-    max-width: 60rem;
+    max-width: 19rem;
+    width: max-content;
+    padding: 0.5rem;
   }
   .blog-container p {
     max-width: none;
     text-align: center;
+    margin: 0rem;
   }
 }

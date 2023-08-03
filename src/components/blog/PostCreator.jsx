@@ -101,7 +101,7 @@ function PostCreator() {
             />
             <textarea
               placeholder="Content"
-              value={content}
+              defaultValue={content}
               onChange={(e) => setContent(e.target.value)}
             ></textarea>
             <input
