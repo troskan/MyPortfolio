@@ -13,7 +13,7 @@ const BlogPosts = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
   useEffect(() => {
-    fetch("https://blogweb.azurewebsites.net/api/Post")
+    fetch("https://blog-backend-dmn0.onrender.com/api/post")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
