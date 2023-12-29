@@ -19,7 +19,7 @@ function Navbar() {
         </nav>
       </div>
 
-      <a href="https://blog-react-ts.vercel.app/">Try the new blog (Alpha)</a>
+      <a href="https://blog-react-ts.vercel.app/">✨Try the new blog (Alpha)</a>
     </>
   );
 }
